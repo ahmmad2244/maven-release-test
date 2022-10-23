@@ -8,6 +8,20 @@
     <artifactId>maven-release-test</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <distributionManagement>
+        <repository>
+            <id>maven-release-test</id>
+            <name>GitHub maven-release-test Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/ahmmad2244/maven-release-test</url>
+        </repository>
+    </distributionManagement>
+    <scm>
+        <connection>scm:git:https://github.com/ahmmad2244/maven-release-test.git</connection>
+        <developerConnection>scm:git:https://github.com/ahmmad2244/maven-release-test.git</developerConnection>
+        <url>https://github.com/ahmmad2244/maven-release-test</url>
+        <tag>HEAD</tag>
+    </scm>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target> 11</maven.compiler.target>
