@@ -4,7 +4,7 @@
 
     <groupId>org.test</groupId>
     <artifactId>maven-release-test</artifactId>
-    <version>$</version>
+    <version>1.2-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
