@@ -4,7 +4,7 @@
 
     <groupId>org.test</groupId>
     <artifactId>maven-release-test</artifactId>
-    <version>0.1.1</version>
+    <version>0.1.1-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
@@ -28,13 +28,15 @@
         <connection>scm:git:https://github.com/ahmmad2244/maven-release-test.git</connection>
         <developerConnection>scm:git:https://github.com/ahmmad2244/maven-release-test.git</developerConnection>
         <url>https://github.com/ahmmad2244/maven-release-test</url>
-        <tag>maven-release-test-0.1.1</tag>
+        <tag>head</tag>
     </scm>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven-release-plugin-version>2.5.3</maven-release-plugin-version>
+        <maven-deploy-plugin-version>2.8.2</maven-deploy-plugin-version>
     </properties>
 
     <build>
@@ -42,7 +44,34 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.3</version>
+                <version>${maven-release-plugin-version}</version>
+                <configuration>
+                    <pomFileName>scala-starter-parent/pom.xml</pomFileName>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>default</id>
+                        <goals>
+                            <goal>perform</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Maven deploy plugin-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>${maven-deploy-plugin-version}</version>
+                <executions>
+                    <execution>
+                        <id>default-deploy</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
