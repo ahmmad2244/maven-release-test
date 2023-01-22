@@ -4,7 +4,7 @@
 
     <groupId>org.test</groupId>
     <artifactId>maven-release-test</artifactId>
-    <version>0.1.4</version>
+    <version>0.1.5-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
@@ -28,7 +28,7 @@
         <connection>scm:git:https://github.com/ahmmad2244/maven-release-test.git</connection>
         <developerConnection>scm:git:https://github.com/ahmmad2244/maven-release-test.git</developerConnection>
         <url>https://github.com/ahmmad2244/maven-release-test</url>
-        <tag>maven-release-test-0.1.4</tag>
+        <tag>0.1.1</tag>
     </scm>
 
     <properties>
