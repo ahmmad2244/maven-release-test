@@ -4,7 +4,11 @@
 
     <groupId>org.test</groupId>
     <artifactId>maven-release-test</artifactId>
+    <packaging>pom</packaging>
     <version>0.1.5-SNAPSHOT</version>
+    <modules>
+        <module>subModule</module>
+    </modules>
 
     <dependencies>
         <dependency>
